@@ -1,0 +1,11 @@
+http:
+  listener:
+    host: "localhost"
+    port: "8081"
+    path: "/fastGoCall/{serviceType}"
+db:
+  host: "sql12.freesqldatabase.com"
+  port: "3306"
+  user: "sql12598341"
+  password: "v6Q15s48Bx"
+  database: "sql12598341"

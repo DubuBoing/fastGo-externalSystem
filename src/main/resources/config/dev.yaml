@@ -1,0 +1,11 @@
+http:
+  listener:
+    host: "0.0.0.0"
+    port: "8081"
+    path: "/getRoutes"
+db:
+  host: "sql12.freesqldatabase.com"
+  port: "3306"
+  user: "sql12598341"
+  password: "v6Q15s48Bx"
+  database: "sql12598341"
