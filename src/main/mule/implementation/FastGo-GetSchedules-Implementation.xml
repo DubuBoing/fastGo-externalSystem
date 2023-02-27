@@ -6,11 +6,11 @@
 http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	<sub-flow name="FastGo-GetSchedules-ImplementationFlow" doc:id="4d4e296e-41e4-42f3-b9be-1d20434e3d70" >
-		<db:select doc:name="Select" doc:id="8c2fa932-91ae-45a8-a441-bf663079d8e6" config-ref="Database_Config">
+		<db:select doc:name="get Schedules from DB" doc:id="8c2fa932-91ae-45a8-a441-bf663079d8e6" config-ref="Database_Config">
 			<db:sql ><![CDATA[SELECT * from schedules 
 WHERE companyName = "FastGo"]]></db:sql>
 		</db:select>
-		<ee:transform doc:name="Transform Message" doc:id="be41b787-5c47-4ea7-8436-ee92e1390f94" >
+		<ee:transform doc:name="DBtoJSON" doc:id="be41b787-5c47-4ea7-8436-ee92e1390f94" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
 output application/json

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="fastgo-externalsystem-test-suite.xml" />
+	<munit:test name="fastgo-externalsystem-test-suite-fastgo-externalsystemFlowTest" doc:id="0a17fcb5-5321-4b6e-97bf-15dec4afc1b0" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to fastgo-externalsystemFlow" doc:id="e544fe91-5633-48fd-b5f8-728f85e92e01" name="fastgo-externalsystemFlow"/>
+		</munit:execution>
+		<munit:validation>
+			<munit-tools:assert doc:name="Assert expression" doc:id="ce2070b1-685b-48ed-9ec2-5c527012f01f" />
+		</munit:validation>
+	</munit:test>
+
+
+</mule>

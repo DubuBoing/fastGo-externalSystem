@@ -6,11 +6,11 @@
 http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	<sub-flow name="FastGo-GetRoutes-ImplementationFlow" doc:id="6237595c-3f3c-4c0a-9bb4-41e055f0a521" >
-		<db:select doc:name="Select" doc:id="5df3f586-231e-4059-9fd9-d3d43be70a04" config-ref="Database_Config">
+		<db:select doc:name="get Routes" doc:id="5df3f586-231e-4059-9fd9-d3d43be70a04" config-ref="Database_Config">
 			<db:sql ><![CDATA[SELECT * from routes 
 WHERE companyName = "FastGo"]]></db:sql>
 		</db:select>
-		<ee:transform doc:name="Transform Message" doc:id="b6fb6959-9678-41ba-9484-05eec476ade8" >
+		<ee:transform doc:name="DBtoJSON" doc:id="b6fb6959-9678-41ba-9484-05eec476ade8" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
 output application/json
